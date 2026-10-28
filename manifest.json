@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "风格拆解 · AI视频审美库",
+  "version": "0.19.0",
+  "description": "在 X 上一键拆解 AI 视频的风格与提示词，并积累你自己的审美。",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "notifications",
+    "scripting",
+    "tabs",
+    "sidePanel",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*",
+    "https://cdn.syndication.twimg.com/*",
+    "https://video.twimg.com/*",
+    "https://dashscope.aliyuncs.com/*",
+    "https://dashscope-intl.aliyuncs.com/*",
+    "https://dashscope-us.aliyuncs.com/*",
+    "https://*.maas.aliyuncs.com/*",
+    "https://generativelanguage.googleapis.com/*",
+    "https://www.micuapi.ai/*",
+    "https://ark.cn-beijing.volces.com/*",
+    "https://*.volces.com/*",
+    "https://*.atlascloud.ai/*",
+    "https://*.oss-cn-beijing.aliyuncs.com/*",
+    "https://*.oss-ap-southeast-1.aliyuncs.com/*",
+    "https://*.oss-us-east-1.aliyuncs.com/*",
+    "https://*.oss-cn-hongkong.aliyuncs.com/*",
+    "https://*.oss-ap-northeast-1.aliyuncs.com/*",
+    "https://*.oss-eu-central-1.aliyuncs.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "打开风格拆解侧边栏",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "minimum_chrome_version": "114",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxNVCJ9eXEfy6uWzoVhdh2rIBUtsrn2gtDru4SBESs5IQA8U+w+ozIPHnZj14JzQ46Dopgop45dFOZiqmMI79dJGXW6GWLrjcLaXruYhhZ1ieufiI8Vnbe+BlVJ63NrRtHSFWEK1588C21WN1jnKxegfwmqdytlbyw85BjQIBlyxXJq0QvV6SC12dGEsdy9fOw7Y28Vd3dZiAjSB7vAu6ek72XOrkwDewkYI712vRwWEU23kTcym1B4Gdl4wFviKK/1FIKiVfztSxpBIGaznJl204VZqlqt8SGPQ6M19szFJFxVXKK6JhmQjIZO3tyau87JrPbxb1uz1kQe3Sssv34wIDAQAB"
+}

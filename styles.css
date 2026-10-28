@@ -1,0 +1,67 @@
+:root {
+  --bg: #f6f4f0;
+  --surface: #ffffff;
+  --sunk: #f1eee9;
+  --ink: #2b2824;
+  --ink-2: #5c5751;
+  --muted: #948d84;
+  --line: #ebe7e1;
+  --accent: #b5542c;
+  --accent-soft: #f7ece5;
+  --ok: #4a7c59;
+  --ok-soft: #e9f1eb;
+  --bad: #b54848;
+  --bad-soft: #f8e9e9;
+  --shadow: 0 1px 2px rgba(43, 40, 36, .04), 0 6px 20px rgba(43, 40, 36, .05);
+  --r: 14px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1a18; --surface: #252321; --sunk: #2e2b28; --ink: #efebe5; --ink-2: #c4bdb3; --muted: #8f887e;
+    --line: #34312d; --accent: #e08a5f; --accent-soft: #3a2b22; --ok: #8cc29d; --ok-soft: #22302a; --bad: #e08c8c; --bad-soft: #3a2424;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14.5px/1.7 -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: .01em; }
+h1 { font-size: 22px; }
+h2 { font-size: 17px; }
+h3 { font-size: 15px; }
+.muted { color: var(--muted); font-size: 13px; }
+.label { color: var(--muted); font-size: 12px; letter-spacing: .04em; margin-bottom: 8px; }
+.clamp2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+button { font: inherit; font-size: 13.5px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 10px; padding: 7px 14px; cursor: pointer; transition: border-color .15s, background .15s; }
+button:hover { border-color: var(--accent); }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; padding: 10px 16px; }
+button.primary:hover { filter: brightness(1.05); }
+button.ghost { border-color: transparent; background: transparent; color: var(--ink-2); padding: 6px 10px; }
+button.ghost:hover { background: var(--sunk); }
+button.small { font-size: 12px; padding: 4px 10px; border-radius: 8px; }
+button:disabled { opacity: .45; cursor: default; }
+input, select { font: inherit; width: 100%; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); outline: none; }
+input:focus, select:focus { border-color: var(--accent); }
+
+.card { background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); padding: 20px 22px; }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.spread { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.stack > * + * { margin-top: 16px; }
+
+.chip { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--line); font-size: 12.5px; cursor: pointer; user-select: none; background: var(--surface); color: var(--ink-2); transition: all .15s; }
+.chip:hover { border-color: var(--accent); }
+.chip.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.tag { display: inline-block; padding: 2px 9px; border-radius: 6px; background: var(--sunk); color: var(--ink-2); font-size: 12px; }
+
+.dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--muted); }
+.dot.done { background: var(--ok); } .dot.failed { background: var(--bad); }
+.dot.processing, .dot.queued { background: var(--accent); animation: pulse 1.2s infinite; }
+@keyframes pulse { 50% { opacity: .3; } }
+
+.prompt { white-space: pre-wrap; background: var(--sunk); border-radius: 10px; padding: 12px 14px; margin: 0; font-family: inherit; font-size: 13.5px; line-height: 1.75; color: var(--ink); }
+.thumb { background: var(--sunk) center/cover no-repeat; border-radius: 10px; }
+.empty { text-align: center; color: var(--muted); padding: 40px 20px; }
+.note { font-size: 12px; color: var(--muted); text-align: center; margin: 28px 0 12px; }
+.toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 8px 16px; border-radius: 999px; font-size: 13px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+.toast.show { opacity: 1; }
