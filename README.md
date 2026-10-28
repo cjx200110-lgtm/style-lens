@@ -6,6 +6,8 @@ Style Lens 是一个基于 Chrome Manifest V3 的浏览器扩展。打开一条�
 
 > 当前版本：`0.19.0`。项目界面以中文为主，适合 AI 视频创作者、导演、设计师和视觉灵感收藏者。
 
+[下载最新版本](https://github.com/cjx200110-lgtm/style-lens/releases/latest) · [提交问题](https://github.com/cjx200110-lgtm/style-lens/issues) · [参与贡献](CONTRIBUTING.md) · [更新日志](CHANGELOG.md)
+
 ## 主要能力
 
 - **一键收藏与拆解**：在 X / Twitter 视频帖侧边栏中收藏风格，或进行包含逐镜头信息的完整拆解。
